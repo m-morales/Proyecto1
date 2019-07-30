@@ -1,0 +1,8 @@
+<ul *ngIf="show" class="list-group">
+    <li *ngFor="let user of users" class="list-group-item d-flex justify-content-between align-items-center">
+      {{ user.name}}
+      <span class="badge badge-primary badge-pill">{{user.email}}</span>
+      <img [src]="imgLogo" alt="logoCF">
+    </li>
+</ul>
+<button (click)="mostrarLista()">{{show? 'hide':'show'}}</button>
